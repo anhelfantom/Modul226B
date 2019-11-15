@@ -1,15 +1,10 @@
-package model;
-
-import model.constants.EyeDirection;
-import model.constants.Movement;
-
 public class Player implements Movable {
 
     private int x, y;
     private EyeDirection eyeDirection;
     private boolean isAlive;
 
-    public int getX() {
+    int getX() {
         return x;
     }
 
@@ -17,7 +12,7 @@ public class Player implements Movable {
         this.x = x;
     }
 
-    public int getY() {
+    int getY() {
         return y;
     }
 
@@ -25,11 +20,11 @@ public class Player implements Movable {
         this.y = y;
     }
 
-    public boolean isAlive() {
+    boolean isAlive() {
         return isAlive;
     }
 
-    public void setAlive(boolean alive) {
+    void setAlive(boolean alive) {
         isAlive = alive;
     }
 
@@ -37,7 +32,7 @@ public class Player implements Movable {
         return eyeDirection;
     }
 
-    public void setEyeDirection(EyeDirection eyeDirection) {
+    void setEyeDirection(EyeDirection eyeDirection) {
         this.eyeDirection = eyeDirection;
     }
 
@@ -51,7 +46,7 @@ public class Player implements Movable {
         y += dy;
     }
 
-    public void refresh() {
+    void refresh() {
 
         isAlive = true;
         eyeDirection = EyeDirection.EAST;
@@ -156,7 +151,7 @@ public class Player implements Movable {
         }
     }
 
-    public void print() {
+    void print() {
 
         switch ( eyeDirection ) {
 

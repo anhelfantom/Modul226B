@@ -1,6 +1,4 @@
-package controller;
 
-import model.constants.Movement;
 
 class Action {
 

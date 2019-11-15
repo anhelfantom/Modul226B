@@ -1,16 +1,9 @@
-package controller;
 
-import model.Map;
-import model.Player;
-import model.constants.EyeDirection;
-import model.constants.GameElement;
-import model.constants.Movement;
-import view.ConsoleView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameController extends Player{
+class GameController extends Player{
 
     private Player player;
     private List<Integer[][]> maps = new ArrayList<>();
@@ -93,10 +86,10 @@ public class GameController extends Player{
         maps.add( map5 );
     }
 
-    public GameController() {
+    GameController() {
     }
 
-    public void setPlayer(Player player) {
+    void setPlayer(Player player) {
 
         this.player = player;
         this.player.setAlive( true );
@@ -109,7 +102,7 @@ public class GameController extends Player{
         globalGameLvl = 1;
     }
 
-    public void startMGL() {
+    void startMGL() {
         while( true ) {
             if( player.isAlive() ) {
                 if( globalGameLvl == 1 ) {

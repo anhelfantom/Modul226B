@@ -1,5 +1,3 @@
-package model.constants;
-
 public enum GameElement {
 
     START( 0 ),

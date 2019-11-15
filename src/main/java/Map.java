@@ -1,11 +1,9 @@
-package model;
-
 public class Map {
 
     private Integer[][] map2DArray;
     private Player player;
 
-    public Map( Integer[][] map2DArray) {
+    Map(Integer[][] map2DArray) {
 
         this.map2DArray = new Integer[ map2DArray.length ][ map2DArray[ 0 ].length ];
         for (int i = 0; i < map2DArray.length; i++) {
@@ -17,7 +15,7 @@ public class Map {
         }
     }
 
-    public void setPlayer(Player player) {
+    void setPlayer(Player player) {
 
         this.player = player;
         for (int i = 0; i < map2DArray.length; i++) {
@@ -33,12 +31,12 @@ public class Map {
         }
     }
 
-    public int getCurrentElement(Player player ) {
+    int getCurrentElement(Player player) {
 
         return map2DArray[ player.getY() ][ player.getX() ];
     }
 
-    public boolean isObstacle( int x, int y ) {
+    boolean isObstacle(int x, int y) {
 
         try {
 
@@ -51,12 +49,12 @@ public class Map {
 
 
 
-    public boolean isFinished(int x, int y ) {
+    boolean isFinished(int x, int y) {
 
         return map2DArray[ y ][ x ] == 9;
     }
 
-    public Integer[][] getMap2DArray() {
+    Integer[][] getMap2DArray() {
         return map2DArray;
     }
 }

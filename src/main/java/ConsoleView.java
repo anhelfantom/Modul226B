@@ -1,16 +1,10 @@
-package view;
-
-import model.constants.GameElement;
-import model.Map;
-import model.Player;
-
 public class ConsoleView extends Map{
 
     public ConsoleView(Integer[][] map2DArray) {
         super(map2DArray);
     }
 
-    public static void printField(Map field, Player player ) {
+    static void printField(Map field, Player player) {
         Integer[][] map = field.getMap2DArray();
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[ 0 ].length; j++) {
@@ -49,7 +43,7 @@ public class ConsoleView extends Map{
         System.out.println( "========================================================================================");
     }
 
-    public static void congrats( int lvl ) {
+    static void congrats(int lvl) {
 
         System.out.println( "Congratulations, Level " + lvl + " is passed!!!" );
         System.out.println( "========================================================================================");
@@ -57,13 +51,13 @@ public class ConsoleView extends Map{
     }
 
 
-    public static void printLvlLoad( int lvl ) {
+    static void printLvlLoad(int lvl) {
 
         System.out.println( "Level " + lvl + " is ready! Good luck and have fun!");
         System.out.println( "========================================================================================");
     }
 
-    public static void printFail(GameElement failedElement) {
+    static void printFail(GameElement failedElement) {
 
         if( failedElement == GameElement.OBSTACLE ) {
 
@@ -76,12 +70,12 @@ public class ConsoleView extends Map{
         System.out.println( "Start new game? Print y/n" );
     }
 
-    public static void printBye() {
+    static void printBye() {
 
         System.out.println( "Bye..." );
     }
 
-    public static void printEnd() {
+    static void printEnd() {
 
         System.out.println( "Congratulations, you win!!!" );
         System.out.println( "Start new game? Print y/n" );
